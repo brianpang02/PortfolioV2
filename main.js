@@ -34,7 +34,6 @@ const allSections = document.querySelectorAll("section");
 
 const revealSection = function (entries) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) return;
 
@@ -58,4 +57,32 @@ percentageBar.forEach((bar) => {
     .closest(".skill__right")
     .querySelector(".percentage").textContent;
   bar.style.width = `${value}%`;
+});
+
+const myWorksContainer = document.querySelector(".my--works__container");
+const aboutMeContainer = document.querySelector(".about__container");
+const skills = document.querySelectorAll(".skill");
+
+const revealWork = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  entry.target
+    .querySelector(".my--work__overlay")
+    .classList.add("my--work__overlay--active");
+
+  reveal.unobserve(entry.target);
+};
+
+const reveal = new IntersectionObserver(revealWork, {
+  root: null,
+  threshold: 0.2,
+});
+
+reveal.observe(myWorksContainer);
+reveal.observe(aboutMeContainer);
+skills.forEach((skill) => {
+  reveal.observe(skill);
 });

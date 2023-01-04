@@ -1,0 +1,357 @@
+/*-----------------------------INTRODUCTION-----------------------*/
+.introduction {
+  background-color: var(--color-secondary);
+  padding: 20rem 0;
+  margin-bottom: 10rem;
+}
+
+.introduction__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.introduction__container span {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.introduction__container span img {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+}
+
+.introduction__container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.introduction__container h3 {
+  margin-top: 3rem;
+  font-size: 1.3rem;
+}
+
+/*-------------------------------MY WORKS-----------------------*/
+
+.my--works__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.my--work {
+  overflow: hidden;
+}
+
+.my--work a {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.my--work img {
+  height: 100%;
+  border-radius: inherit;
+  transition: var(--transition);
+}
+
+.my--work .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding-left: 2rem;
+  padding-top: 300px;
+  position: absolute;
+  transform: translateY(50rem);
+  transition: var(--transition);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.my--work a:hover .overlay {
+  transform: translateY(0);
+}
+
+.my--work a:hover img {
+  transform: scale(1.3);
+}
+
+/*-------------------------------ABOUT ME-----------------------*/
+.about__container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about__description img {
+  border-radius: 2rem;
+  height: 100%;
+}
+
+.about__description p {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.about__strengths {
+  margin-top: 10rem;
+  background-color: var(--color-primary);
+  padding: 0 3rem 3rem;
+}
+
+.strengths__container {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.strength {
+  background-color: var(--color-secondary);
+  padding: 1rem 2rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-radius: 2rem;
+  width: 300px;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.strength:hover {
+  background-color: #b43342;
+}
+
+.strength--active {
+  transform: translateY(-20%);
+}
+
+.strength__description {
+  gap: 3rem;
+  align-items: center;
+  display: none;
+}
+
+.strength__description--active {
+  display: flex;
+}
+
+.strength__description img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  filter: invert(1);
+}
+
+.strength__description p {
+  color: var(--color-black);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/*-------------------------------SKILLS-----------------------*/
+.skills__container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.skill img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 4rem;
+}
+
+.skill__right {
+  width: 100%;
+}
+
+.skill__percentage {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill__bar,
+.skill__bar--percentage {
+  margin-top: 1rem;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.skill__bar {
+  width: 100%;
+  background-color: var(--color-primary);
+}
+
+.skill__bar--percentage {
+  background-color: var(--color-secondary);
+}
+
+/*-------------------------------GET IN TOUCH-----------------------*/
+.get-in-touch__container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 5rem;
+}
+
+.get-in-touch-left-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.get-in-touch-left-bottom {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.get-in-touch-left-top input,
+.get-in-touch-left-bottom {
+  padding: 0.7rem 0;
+  background-color: transparent;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.get-in-touch-left button,
+.get-in-touch-right a {
+  background-color: transparent;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 15px 50px;
+  border-radius: 30px;
+  margin-top: 3rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.get-in-touch-left button:hover,
+.get-in-touch-right a:hover {
+  border-color: white;
+}
+
+.details {
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+.details h5 {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .skills__container,
+  .about__container {
+    width: var(--container-width-lg);
+  }
+
+  .get-in-touch__container {
+    grid-template-columns: 60% 40%;
+  }
+
+  .strength {
+    font-size: 1rem;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 5rem 0 10rem;
+  }
+
+  .container {
+    width: var(--container-width-md);
+  }
+
+  .introduction__container {
+    gap: 4rem;
+  }
+
+  .introduction__container span {
+    width: 300px;
+    height: 300px;
+  }
+
+  .introduction__container span img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .introduction__container h1 {
+    font-size: 2rem;
+  }
+
+  .introduction__container h3 {
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .my--works__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .about__description {
+    grid-template-columns: 1fr;
+  }
+
+  .get-in-touch__container {
+    grid-template-columns: 1fr;
+  }
+
+  .strength {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .strength {
+    width: 150px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .introduction__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .my--works__container {
+    grid-template-columns: 1fr;
+  }
+}
